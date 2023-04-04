@@ -91,3 +91,12 @@ a response stream of that file, which can be used to download.
 
 ## Video Proof
 https://user-images.githubusercontent.com/63163965/229811769-2835c2bb-2305-41d9-bd03-42b2b155beeb.mp4
+
+## How to deploy the app
+This is assuming the EC2 instance is already created and has .NET 7 SDK and its dependencies installed. And has the environment variables set up.
+- Clone the repository in the EC2 instance
+- Navigate to the repository's directory
+- Restore Nuget packages, build, and publish the .NET project (this is to create an atrifact of the application)
+- Move the published artifact to a custom location (where it can be accessed by Apache2 or any other tool)
+- Create a configuration file to run the app's DLLs on a specified port
+Note: The recommended way of doing this by AWS, is to use a Docker image of the app, using an ECS Cluster to run the Docker image, and then using a launch type of EC2. The steps I have mentioned above are in more generic terms and is how it's done using Microsoft Azure.
