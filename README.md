@@ -6,10 +6,10 @@ You need the .NET 7 SDK installed
 - Open `localhost:5119/swagger` in your browser
 Note: You need to add `AccessKey` and `SecretKey` to your machine's environment variables or the operations won't be authorized
 ## Configurations
-`GET files`: This lists all files names inside the `image/` directory in the bucket specified in `appsettings.json`
-`GET files/download/{imageName}`: This downloads the specified file name that is only under the `images/` directory. No need to specify the type of the image,
+- `GET files`: This lists all files names inside the `image/` directory in the bucket specified in `appsettings.json`
+- `GET files/download/{imageName}`: This downloads the specified file name that is only under the `images/` directory. No need to specify the type of the image,
 it's already handled.
-`POST files`: This uploads a specified file to the bucket, and it creates a new bucket with the specified bucket name if no bucket was found under that name, then
+- `POST files`: This uploads a specified file to the bucket, and it creates a new bucket with the specified bucket name if no bucket was found under that name, then
 uploads the file. Returns a 204 (No content) if it was successfully uploaded, otherwise, it'll return any issue found by the S3 SDK.
 ## Code Explanation
 ```
