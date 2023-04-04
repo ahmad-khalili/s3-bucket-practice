@@ -88,3 +88,6 @@ var file = await s3Client.GetObjectAsync(getObjectRequest);
 - The `ListObjectsAsync` method requires a `ListObjectsRequest` object, which specifies which bucke to pull from, and the prefix of the files to match
 - The `GetObjectAsync` method requires a `GetObjectRequest` object which takes the key, and the bucket of the needed file, and retrieves relevant info for downloading, like
 a response stream of that file, which can be used to download.
+
+## Video Proof
+https://user-images.githubusercontent.com/63163965/229811769-2835c2bb-2305-41d9-bd03-42b2b155beeb.mp4
