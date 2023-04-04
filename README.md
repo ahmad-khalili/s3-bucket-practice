@@ -99,4 +99,5 @@ This is assuming the EC2 instance is already created and has .NET 7 SDK and its 
 - Restore Nuget packages, build, and publish the .NET project (this is to create an atrifact of the application)
 - Move the published artifact to a custom location (where it can be accessed by Apache2 or any other tool)
 - Create a configuration file to run the app's DLLs on a specified port
+
 Note: The recommended way of doing this by AWS, is to use a Docker image of the app, using an ECS Cluster to run the Docker image, and then using a launch type of EC2. The steps I have mentioned above are in more generic terms and is how it's done using Microsoft Azure.
